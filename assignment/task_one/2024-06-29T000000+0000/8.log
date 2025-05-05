@@ -1,0 +1,37 @@
+[2024-06-30 08:37:09,136] {taskinstance.py:896} INFO - Dependencies all met for <TaskInstance: assignment.task_one 2024-06-29T00:00:00+00:00 [queued]>
+[2024-06-30 08:37:09,146] {taskinstance.py:896} INFO - Dependencies all met for <TaskInstance: assignment.task_one 2024-06-29T00:00:00+00:00 [queued]>
+[2024-06-30 08:37:09,146] {taskinstance.py:1087} INFO - 
+--------------------------------------------------------------------------------
+[2024-06-30 08:37:09,146] {taskinstance.py:1088} INFO - Starting attempt 8 of 8
+[2024-06-30 08:37:09,147] {taskinstance.py:1089} INFO - 
+--------------------------------------------------------------------------------
+[2024-06-30 08:37:09,158] {taskinstance.py:1107} INFO - Executing <Task(PythonOperator): task_one> on 2024-06-29T00:00:00+00:00
+[2024-06-30 08:37:09,161] {standard_task_runner.py:52} INFO - Started process 158 to run task
+[2024-06-30 08:37:09,163] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'assignment', 'task_one', '2024-06-29T00:00:00+00:00', '--job-id', '17', '--pool', 'default_pool', '--raw', '--subdir', 'DAGS_FOLDER/assignment.py', '--cfg-path', '/tmp/tmp5ciugvv_', '--error-file', '/tmp/tmpu9ikgy2y']
+[2024-06-30 08:37:09,164] {standard_task_runner.py:77} INFO - Job 17: Subtask task_one
+[2024-06-30 08:37:09,195] {logging_mixin.py:104} INFO - Running <TaskInstance: assignment.task_one 2024-06-29T00:00:00+00:00 [running]> on host 4ecec8cb0ca2
+[2024-06-30 08:37:09,228] {taskinstance.py:1302} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=assignment
+AIRFLOW_CTX_TASK_ID=task_one
+AIRFLOW_CTX_EXECUTION_DATE=2024-06-29T00:00:00+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2024-06-29T00:00:00+00:00
+[2024-06-30 08:37:10,012] {logging_mixin.py:104} INFO - wrote file: m1a.html
+[2024-06-30 08:37:10,012] {logging_mixin.py:104} INFO - pulled: m1a.html
+[2024-06-30 08:37:10,013] {logging_mixin.py:104} INFO - --- waiting ---
+[2024-06-30 08:37:25,538] {logging_mixin.py:104} INFO - wrote file: m1b.html
+[2024-06-30 08:37:25,538] {logging_mixin.py:104} INFO - pulled: m1b.html
+[2024-06-30 08:37:25,539] {logging_mixin.py:104} INFO - --- waiting ---
+[2024-06-30 08:37:41,390] {logging_mixin.py:104} INFO - wrote file: m1c.html
+[2024-06-30 08:37:41,391] {logging_mixin.py:104} INFO - pulled: m1c.html
+[2024-06-30 08:37:41,391] {logging_mixin.py:104} INFO - --- waiting ---
+[2024-06-30 08:37:57,246] {logging_mixin.py:104} INFO - wrote file: m2a.html
+[2024-06-30 08:37:57,247] {logging_mixin.py:104} INFO - pulled: m2a.html
+[2024-06-30 08:37:57,247] {logging_mixin.py:104} INFO - --- waiting ---
+[2024-06-30 08:38:13,291] {logging_mixin.py:104} INFO - wrote file: m2b.html
+[2024-06-30 08:38:13,292] {logging_mixin.py:104} INFO - pulled: m2b.html
+[2024-06-30 08:38:13,292] {logging_mixin.py:104} INFO - --- waiting ---
+[2024-06-30 08:38:28,307] {python.py:151} INFO - Done. Returned value was: None
+[2024-06-30 08:38:28,321] {taskinstance.py:1211} INFO - Marking task as SUCCESS. dag_id=assignment, task_id=task_one, execution_date=20240629T000000, start_date=20240630T083709, end_date=20240630T083828
+[2024-06-30 08:38:28,352] {taskinstance.py:1265} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2024-06-30 08:38:28,358] {local_task_job.py:151} INFO - Task exited with return code 0

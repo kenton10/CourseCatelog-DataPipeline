@@ -1,0 +1,35 @@
+[2024-06-30 08:38:28,958] {taskinstance.py:896} INFO - Dependencies all met for <TaskInstance: assignment.task_two 2024-06-29T00:00:00+00:00 [queued]>
+[2024-06-30 08:38:28,967] {taskinstance.py:896} INFO - Dependencies all met for <TaskInstance: assignment.task_two 2024-06-29T00:00:00+00:00 [queued]>
+[2024-06-30 08:38:28,967] {taskinstance.py:1087} INFO - 
+--------------------------------------------------------------------------------
+[2024-06-30 08:38:28,967] {taskinstance.py:1088} INFO - Starting attempt 1 of 1
+[2024-06-30 08:38:28,968] {taskinstance.py:1089} INFO - 
+--------------------------------------------------------------------------------
+[2024-06-30 08:38:28,979] {taskinstance.py:1107} INFO - Executing <Task(PythonOperator): task_two> on 2024-06-29T00:00:00+00:00
+[2024-06-30 08:38:28,982] {standard_task_runner.py:52} INFO - Started process 307 to run task
+[2024-06-30 08:38:28,984] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'assignment', 'task_two', '2024-06-29T00:00:00+00:00', '--job-id', '18', '--pool', 'default_pool', '--raw', '--subdir', 'DAGS_FOLDER/assignment.py', '--cfg-path', '/tmp/tmpsbd3r549', '--error-file', '/tmp/tmpr9jx5wtl']
+[2024-06-30 08:38:28,984] {standard_task_runner.py:77} INFO - Job 18: Subtask task_two
+[2024-06-30 08:38:29,013] {logging_mixin.py:104} INFO - Running <TaskInstance: assignment.task_two 2024-06-29T00:00:00+00:00 [running]> on host 4ecec8cb0ca2
+[2024-06-30 08:38:29,047] {taskinstance.py:1302} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=assignment
+AIRFLOW_CTX_TASK_ID=task_two
+AIRFLOW_CTX_EXECUTION_DATE=2024-06-29T00:00:00+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2024-06-29T00:00:00+00:00
+[2024-06-30 08:38:29,048] {taskinstance.py:1501} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/taskinstance.py", line 1157, in _run_raw_task
+    self._prepare_and_execute_task_with_callbacks(context, task)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/taskinstance.py", line 1331, in _prepare_and_execute_task_with_callbacks
+    result = self._execute_task(context, task_copy)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/taskinstance.py", line 1361, in _execute_task
+    result = task_copy.execute(context=context)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/operators/python.py", line 150, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/operators/python.py", line 161, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/assignment.py", line 46, in combine
+    os.chdir("scratch/")
+FileNotFoundError: [Errno 2] No such file or directory: 'scratch/'
+[2024-06-30 08:38:29,051] {taskinstance.py:1551} INFO - Marking task as FAILED. dag_id=assignment, task_id=task_two, execution_date=20240629T000000, start_date=20240630T083828, end_date=20240630T083829
+[2024-06-30 08:38:29,077] {local_task_job.py:151} INFO - Task exited with return code 1

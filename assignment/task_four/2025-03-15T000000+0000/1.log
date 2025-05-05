@@ -1,0 +1,23 @@
+[2025-03-16 06:49:58,624] {taskinstance.py:896} INFO - Dependencies all met for <TaskInstance: assignment.task_four 2025-03-15T00:00:00+00:00 [queued]>
+[2025-03-16 06:49:58,653] {taskinstance.py:896} INFO - Dependencies all met for <TaskInstance: assignment.task_four 2025-03-15T00:00:00+00:00 [queued]>
+[2025-03-16 06:49:58,653] {taskinstance.py:1087} INFO - 
+--------------------------------------------------------------------------------
+[2025-03-16 06:49:58,654] {taskinstance.py:1088} INFO - Starting attempt 1 of 1
+[2025-03-16 06:49:58,654] {taskinstance.py:1089} INFO - 
+--------------------------------------------------------------------------------
+[2025-03-16 06:49:58,668] {taskinstance.py:1107} INFO - Executing <Task(PythonOperator): task_four> on 2025-03-15T00:00:00+00:00
+[2025-03-16 06:49:58,674] {standard_task_runner.py:52} INFO - Started process 192 to run task
+[2025-03-16 06:49:58,677] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'assignment', 'task_four', '2025-03-15T00:00:00+00:00', '--job-id', '47', '--pool', 'default_pool', '--raw', '--subdir', 'DAGS_FOLDER/assignment.py', '--cfg-path', '/tmp/tmppm1mje4z', '--error-file', '/tmp/tmp2dz2iu2k']
+[2025-03-16 06:49:58,678] {standard_task_runner.py:77} INFO - Job 47: Subtask task_four
+[2025-03-16 06:49:58,716] {logging_mixin.py:104} INFO - Running <TaskInstance: assignment.task_four 2025-03-15T00:00:00+00:00 [running]> on host 4ecec8cb0ca2
+[2025-03-16 06:49:58,759] {taskinstance.py:1302} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=assignment
+AIRFLOW_CTX_TASK_ID=task_four
+AIRFLOW_CTX_EXECUTION_DATE=2025-03-15T00:00:00+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2025-03-15T00:00:00+00:00
+[2025-03-16 06:49:58,762] {logging_mixin.py:104} INFO - wrote file: titles_clean.json
+[2025-03-16 06:49:58,763] {python.py:151} INFO - Done. Returned value was: None
+[2025-03-16 06:49:58,773] {taskinstance.py:1211} INFO - Marking task as SUCCESS. dag_id=assignment, task_id=task_four, execution_date=20250315T000000, start_date=20250316T064958, end_date=20250316T064958
+[2025-03-16 06:49:58,798] {taskinstance.py:1265} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-03-16 06:49:58,811] {local_task_job.py:151} INFO - Task exited with return code 0
